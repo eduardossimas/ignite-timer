@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# ⏱️ Ignite Timer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ignite Timer é uma aplicação de timer de produtividade, inspirada na técnica Pomodoro, onde você pode definir uma tarefa, estipular um tempo e acompanhar seu progresso. Ideal para organizar seu foco durante as sessões de trabalho.
 
-Currently, two official plugins are available:
+![Preview](./src/assets/screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades
 
-## Expanding the ESLint configuration
+- ⌨️ Defina o nome do projeto/tarefa que irá realizar
+- ⏲️ Escolha o tempo de foco (em minutos)
+- ▶️ Inicie, pause e reinicie o cronômetro
+- 📋 Visualize o histórico de tarefas
+- 📈 Veja o status de cada tarefa (Concluída, Interrompida, Em andamento)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 💻 Tecnologias utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+- [Zod](https://zod.dev/)
+- [React Hook Form](https://react-hook-form.com/)
+- [React Router DOM](https://reactrouter.com/)
+- [Immer](https://immerjs.github.io/immer/)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/eduardossimas/ignite-timer.git
+cd ignite-timer
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Instale as dependências:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+# usando npm
+npm install
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+# ou usando yarn
+yarn
 ```
+
+Inicie o projeto:
+
+```bash
+# usando npm
+npm run dev
+
+# ou usando yarn
+yarn dev
+```
+
+Abra no navegador:
+
+[http://localhost:5173](http://localhost:5173)
+
+## 📁 Estrutura do projeto
+
+- `src/`: Contém todo o código-fonte da aplicação.
+  - `components/`: Componentes reutilizáveis da interface, como botões e formulários.
+  - `contexts/`: Contextos do React para gerenciamento de estado global, como o ciclo de tarefas.
+  - `pages/`: Páginas principais da aplicação (`Home` e `History`).
+  - `reducers/`: Redutores utilizados para controle de estado com o `useReducer`.
+  - `styles/`: Estilos globais da aplicação com styled-components.
+  - `App.tsx`: Arquivo principal de roteamento.
+  - `main.tsx`: Ponto de entrada da aplicação.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Feito com 💻 por [Eduardo Simas](https://github.com/eduardossimas)
